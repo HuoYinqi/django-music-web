@@ -1,0 +1,99 @@
+div.play-content {
+    position:absolute;
+    top: 10%;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+}
+
+div.play-content div.music-info {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid red;
+}
+
+div.music-info > div {
+    margin-left: 10%;
+}
+
+div.music-info div.image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    border: 1px solid red;
+}
+
+div.image img {
+    height: 80%;
+    width: 50%;
+    border-radius: 50%;
+}
+
+div.music-info div.basic-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 20%;
+    border: 1px solid red;
+}
+
+div.basic-info a {
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: aquamarine;
+    border: 1px ridge silver;
+}
+
+div.lyric-and-play-list {
+    display: flex;
+    width: 100%;
+    height: 60%;
+    border: 1px solid red;
+}
+
+div.lyric-and-play-list textarea {
+    color: green;
+    font-size: 20px;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    resize: none;
+}
+
+div.lyric-and-play-list div.play-list{
+    background-color:lightcyan;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+div.play-list > div:first-child{
+    background-color: inherit;
+    font-size: 20px;
+}
+
+div.play-list > div{
+    background-color: inherit;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid skyblue;
+}
+
+div.play-list > div > div {
+    width: 30%;
+    margin-left: 5%;
+}
+
+div.play-list div.current-playing{
+    background-color: whitesmoke;
+}

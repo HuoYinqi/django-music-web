@@ -1,0 +1,50 @@
+div.music-board {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    width: 70%;
+    height: 200%;
+}
+
+div.music-board div.music-board-title {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 2em;
+}
+
+div.music-board div.music-list-header {
+    display: flex;
+    align-items: center;
+}
+
+div.music-list-header > div {
+    text-align: center;
+    font-size: 20px;
+    width: 20%;
+}
+
+div.music-board div.music-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+div.music-list div.music-item {
+    display: flex;
+    height: 10%;
+    border-bottom: 1px solid silver;
+
+}
+
+div.music-item > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+}
+
+div.music-item img {
+    height: 90%;
+    width: 40%;
+}

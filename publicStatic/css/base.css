@@ -1,0 +1,249 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+div.top {
+    height: 10%;
+    width: 100%;
+    font-size: 20px;
+    position: absolute;
+    display: flex;
+    border: 1px solid red;
+    align-items: center;
+}
+
+div.top h1{
+    margin-left: 5%;
+}
+
+div.top h1 a{
+    color: lightgreen;
+}
+
+div.top div.search{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+div.top form {
+    width: 30%;
+    height: 50%;
+    margin-left: 10%;
+    display: flex;
+}
+
+div.top form input[type=text]{
+    font-size: 20px;
+    width: 80%;
+}
+
+div.top div.search input[type=text]:focus{
+    border-style: none;
+    width: 80%;
+}
+
+div.top div.search input[type=submit]{
+    width: 20%;
+    border-radius: 2% / 20%;
+}
+
+div.top div.search input[type=submit]:hover {
+    background-color: lightgreen;
+}
+
+div.top div.search input[type=submit]:active {
+    background-color: yellowgreen;
+}
+
+div.nav-bar {
+    font-size: 25px;
+    height: 100%;
+    width: 30%;
+    margin-left: 10%;
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+    justify-content: space-around;
+}
+
+
+div.content{
+    position:absolute;
+    top: 10%;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    border: 1px solid red;
+
+}
+
+div.content div.categories {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100%;
+    font-size: 20px;
+    overflow: auto;
+    background-color:silver ;
+}
+
+div.categories div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12.5%;
+    color:lightgreen;
+    background-color:inherit ;
+}
+
+div.categories div a{
+    color: aquamarine;
+}
+
+div.categories div:hover{
+    background-color:white ;
+}
+
+div.rotate-image {
+    border: 1px solid red;
+    width: 40%;
+    height: 100%;
+    background-color: yellow;
+}
+
+div.rotate-image img{
+    width: 100%;
+    height: 100%;
+}
+
+div.board {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    width: 15%;
+    height: 100%;
+    background-color: wheat;
+    overflow: auto;
+}
+
+div.board > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    height: 50%;
+    background-color: inherit;
+}
+
+div.board > div span{
+    width: 10%;
+    margin-left: 10%;
+}
+
+div.board div:first-child{
+    justify-content:center;
+    background-color: springgreen;
+}
+
+div.hot-search {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 20%;
+    border: 1px solid red;
+    display: flex;
+    justify-content: flex-start;
+}
+
+div.hot-search > div:first-child{
+    height: 100%;    
+    width: 5%;
+    border: 1px solid red;
+}
+
+div.hot-search > div:not(div.hot-search > div:first-child){
+    display: flex;
+    height: 100%;
+    width: 20%;
+    border: 1px solid red;
+    margin-left: 2%;
+    flex-shrink: unset;
+}
+
+div.hot-search > div img{
+    width: 50%;
+    height: 100%;
+}
+
+div.hot-search > div div.hot-song-list{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: silver;
+    font-size: 15px;
+}
+
+div.hot-song-list div:last-child{
+    border: slateblue solid 1px;
+    background-color: yellowgreen;
+}
+
+div.hot-search > div:first-child{
+    height: 100%;
+    width: 10%;
+    border: 1px solid red;
+}
+
+div.hot-music {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70%;
+    height: 40%;
+    width: 100%;
+    border: 1px solid red;
+}
+
+div.hot-music div.hot-bar {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+}
+
+div.hot-music div.hot-bar div {
+    margin-left: 5%;
+    font-size: 20px;
+}
+
+div.hot-music div.hot-music-content {
+    height: 80%;
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+}
+
+div.hot-music div.hot-music-content div.hot-music-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 15%;
+    border: 1px solid red;
+    margin-right: 2%;
+    
+}
+
+div.hot-music-list img {
+    width: 100%;
+    height: 60%;
+}

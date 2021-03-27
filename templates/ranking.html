@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/ranking.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="categories">
+        <div><a href="{% url 'ranking:ranking' %}">全部分类</a></div>
+
+        {% for label in labels %}
+        <div><a href="{% url 'ranking:ranking' %}?type={{ label.id }}">{{label}}</a></div>
+        {% endfor %}
+    </div>
+
+    <div class="music-board">
+        <div class="music-board-title">歌曲排行榜</div>
+        <div class="music-list-header">
+            <div>排名</div>
+            <div>封面</div>
+            <div>歌名</div>
+            <div>歌手</div>
+            <div>类型</div>
+        </div>
+        <div class="music-list">
+            {% for d in song_dynamics %}
+            <div class="music-item">
+                <div>{{ forloop.counter }}</div>
+                <div><img src="{{ d.song.img.url }}"></div>
+                <div><a href="{% url 'play:play' d.song.id %}">{{ d.song.name }}</a></div>
+                <div><a href="javascript:;">{{ d.song.singer }}</a></div>
+                <div><a href="javascript:;">{{ d.song.label }}</a></div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block bottom %}
+{% endblock %}
+

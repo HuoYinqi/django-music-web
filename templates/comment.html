@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/comment.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="comment-content">
+    <div class="comment-nav">
+        <a href="{% url 'index:index' %}">首页</a>&gt<a href="{% url 'play:play' id %}">{{ song.name }}</a>&gt<span>评论</span>
+    </div>
+    <div class="comment-form">评论 -->{{ song.name }}
+        <form action="" method="POST">
+            {% csrf_token %}
+            <input type="textarea" name="content" placeholder="请写下你的评论">
+            <input type="submit" value="发布">
+        </form>
+    </div>
+    <div class="comment-header">----------------------------评论列表----------------------------</div>
+    <div class="comment-list">
+        {% for comment in page.object_list %}
+        <div class="comment-item">
+            <div>{{ user }}</div>
+            <div class="comment-text">{{ comment.text }}</div>
+            <div>{{ comment.date }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="page-index">
+        {% if page.has_previous %}
+        <div><a href="{% url 'comment:comment' id %}?page={{ page.previous_page_number }}">上一页</a></div>
+        {% endif %}
+
+        {% for i in page.paginator.page_range %}
+        {% if i == page.number %}
+        <div>{{ i }}</div>
+        {% else %}
+        <div><a href="{% url 'comment:comment' id %}?page={{ i }}">{{ i }}</a></div>
+        {% endif %}
+        
+        {% endfor %}
+
+        {% if page.has_next %}
+        <div><a href="{% url 'comment:comment' id %}?page={{ page.next_page_number }}">下一页</a></div>
+        {% endif %}
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block bottom %}
+{% endblock %}

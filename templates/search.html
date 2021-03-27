@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/search.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="search-content">
+    <div class="music-header">
+        <div>歌曲</div>
+        <div>歌手</div>
+        <div>时长</div>
+    </div>
+
+    <div class="music-list">
+        {% for m in pages.object_list %}
+        <div class="music-item">
+            <div><a href="{% url 'play:play' m.id %}">{{ m.name }}</a></div>
+            <div>{{ m.singer }}</div>
+            <div>{{ m.time }}</div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="page-index">
+        {% if pages.has_previous %}
+        <div><a href="{% url 'search:search' pages.previous_page_number %}">上一页</a></div>
+        {% endif %}
+
+        {% for p in pages.paginator.page_range %}
+        <div><a href="{% url 'search:search' p %}">{{ p }}</a></div>
+        {% endfor %}
+
+        {% if pages.has_next %}
+        <div><a href="{% url 'search:search' pages.next_page_number %}">下一页</a></div>
+        {% endif %}
+    </div>
+
+</div>
+{% endblock %}
+
+{% block bottom %}
+{% endblock %}

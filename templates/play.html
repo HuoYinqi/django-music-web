@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/play.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="play-content">
+    <div class="music-info">
+        <div class="image">
+            <img src="{{ song.img.url }}">
+            <audio src='{{ song.file.url }}' controls="controls"></audio>
+        </div>
+        <div class="basic-info">
+        <h2>{{ song.name }}</h2>
+            <div>歌手： {{ song.singer }}</div>
+            <div>专辑： {{ song.album }}</div>
+            <div>类型：{{ song.label }}</div>
+            <div class="download_bt"><a href="{% url 'play:download' song.id %}">下载</a></div>
+            <div class="comment_bt"><a href="{% url 'comment:comment' song.id %}">评论</a></div>
+        </div>
+    </div>
+
+    <div class="lyric-and-play-list">
+        <textarea disabled="disabled">{{ lyrics }}</textarea>
+        <div class="play-list">
+            <div>当前播放列表</div>
+            {% for item in play_list %}
+            {% if item.id == song.id %}
+            <div class="current-playing">
+                <div>{{item.name}}</div>
+                <div>{{item.singer}}</div>
+                <div>{{item.time}}</div>
+            </div>
+            {% else %}
+            <div class="list-item">
+                <div><a href="{% url 'play:play' item.id %}">{{item.name}}</a></div>
+                <div>{{item.singer}}</div>
+                <div>{{item.time}}</div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block bottom %}
+
+{% endblock %}
