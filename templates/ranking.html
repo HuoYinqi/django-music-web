@@ -6,8 +6,8 @@
 {% endblock %}
 
 {% block content %}
-<div class="content">
-    <div class="categories">
+<div class="rank-content">
+    <div class="rank-categories">
         <div><a href="{% url 'ranking:ranking' %}">全部分类</a></div>
 
         {% for label in labels %}
@@ -41,4 +41,3 @@
 
 {% block bottom %}
 {% endblock %}
-

@@ -11,24 +11,36 @@
     <div class="music-info">
         <div class="image">
             <img src="{{ song.img.url }}">
-            <audio src='{{ song.file.url }}' controls="controls"></audio>
         </div>
         <div class="basic-info">
-        <h2>{{ song.name }}</h2>
+            <h2>{{ song.name }}</h2>
             <div>歌手： {{ song.singer }}</div>
             <div>专辑： {{ song.album }}</div>
             <div>类型：{{ song.label }}</div>
             <div class="download_bt"><a href="{% url 'play:download' song.id %}">下载</a></div>
             <div class="comment_bt"><a href="{% url 'comment:comment' song.id %}">评论</a></div>
+            <div><button id=next>下一首</button></div>
+            <div><button id=pre>上一首</button></div>
         </div>
+        <audio id="audio" src='{{ song.file.url }}' controls autoplay="true"></audio>
     </div>
 
     <div class="lyric-and-play-list">
         <textarea disabled="disabled">{{ lyrics }}</textarea>
         <div class="play-list">
+            <script>
+                var play_list = new Array()
+                var current_play_id = 0
+            </script>
             <div>当前播放列表</div>
             {% for item in play_list %}
+            <script>
+                play_list.push({{ item.id }})
+            </script>
             {% if item.id == song.id %}
+            <script>
+                current_play_id = {{ forloop.counter }} - 1
+            </script>
             <div class="current-playing">
                 <div>{{item.name}}</div>
                 <div>{{item.singer}}</div>
@@ -45,7 +57,27 @@
         </div>
     </div>
 </div>
+<script>
+    next.onclick = function () {
+        console.log("play")
+        var id = (current_play_id + 1) % play_list.length
+        window.location = "/play/" + play_list[id] + ".html";
+    }
 
+    pre.onclick = function () {
+        console.log("play")
+        var id = (current_play_id + play_list.length - 1) % play_list.length
+        window.location = "/play/" + play_list[id] + ".html";
+    }
+
+
+    var audio = document.getElementById("audio")
+    audio.addEventListener('ended', function () {
+        next.onclick();
+    }, false);
+
+
+</script>
 {% endblock %}
 
 

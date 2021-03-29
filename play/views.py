@@ -18,8 +18,19 @@ def play(request, id):
                 break
     if exist == False:
         play_list.append(
-            {"id": int(id), "singer": song.singer, "name": song.name, "time": song.time}
+            {
+                "id": int(id),
+                "singer": song.singer,
+                "name": song.name,
+                "time": song.time,
+                "url": song.file.url,
+            }
         )
+    play_urls = []
+    for info in play_list:
+        song_id = info["id"]
+        temp = Song.objects.get(id=song_id)
+        play_urls.append(temp.file.url)
     request.session["play_list"] = play_list
     if song.lyrics != "":
         path = unquote(song.lyrics.url)[1::]

@@ -8,13 +8,17 @@ a {
     color: black;
 }
 
+body{
+    background-image: url("../images/background.png");
+}
+
 div.top {
     height: 10%;
     width: 100%;
     font-size: 20px;
     position: absolute;
     display: flex;
-    border: 1px solid red;
+    border-bottom: 2px solid rgb(10, 174, 250);
     align-items: center;
 }
 
@@ -23,7 +27,7 @@ div.top h1{
 }
 
 div.top h1 a{
-    color: lightgreen;
+    color: lightcoral;
 }
 
 div.top div.search{
@@ -69,10 +73,13 @@ div.nav-bar {
     margin-left: 10%;
     display: flex;
     align-items: center;
-    border: 1px solid red;
     justify-content: space-around;
+    color: lightcoral;
 }
 
+div.nav-bar a {
+    color: inherit;
+}
 
 div.content{
     position:absolute;
@@ -80,7 +87,9 @@ div.content{
     width: 100%;
     height: 40%;
     display: flex;
-    border: 1px solid red;
+    border-bottom: 2px solid rgb(10, 174, 250);
+    justify-content: space-between;
+    color: aquamarine;
 
 }
 
@@ -91,7 +100,6 @@ div.content div.categories {
     height: 100%;
     font-size: 20px;
     overflow: auto;
-    background-color:silver ;
 }
 
 div.categories div{
@@ -99,26 +107,25 @@ div.categories div{
     justify-content: center;
     align-items: center;
     height: 12.5%;
-    color:lightgreen;
+    color:inherit;
     background-color:inherit ;
 }
 
 div.categories div a{
-    color: aquamarine;
+    color: inherit;
 }
 
 div.categories div:hover{
-    background-color:white ;
+    background-color:silver;
 }
 
 div.rotate-image {
-    border: 1px solid red;
     width: 40%;
     height: 100%;
-    background-color: yellow;
 }
 
 div.rotate-image img{
+    opacity:50%;
     width: 100%;
     height: 100%;
 }
@@ -126,10 +133,8 @@ div.rotate-image img{
 div.board {
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     width: 15%;
     height: 100%;
-    background-color: wheat;
     overflow: auto;
 }
 
@@ -140,6 +145,11 @@ div.board > div {
     font-size: 20px;
     height: 50%;
     background-color: inherit;
+    color: inherit;
+}
+
+div.board > div a{
+    color: inherit
 }
 
 div.board > div span{
@@ -148,8 +158,8 @@ div.board > div span{
 }
 
 div.board div:first-child{
-    justify-content:center;
-    background-color: springgreen;
+    margin-left: 10%;
+    color: inherit;
 }
 
 div.hot-search {
@@ -157,29 +167,33 @@ div.hot-search {
     top: 50%;
     width: 100%;
     height: 20%;
-    border: 1px solid red;
+    border-bottom: 2px solid rgb(10, 174, 250);
     display: flex;
     justify-content: flex-start;
 }
 
 div.hot-search > div:first-child{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color:lawngreen;
     height: 100%;    
-    width: 5%;
-    border: 1px solid red;
+    width: 10%;
 }
 
 div.hot-search > div:not(div.hot-search > div:first-child){
     display: flex;
     height: 100%;
     width: 20%;
-    border: 1px solid red;
-    margin-left: 2%;
+    margin-right: 2%;
     flex-shrink: unset;
 }
 
 div.hot-search > div img{
     width: 50%;
     height: 100%;
+    opacity: 70%;
 }
 
 div.hot-search > div div.hot-song-list{
@@ -189,20 +203,15 @@ div.hot-search > div div.hot-song-list{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    background-color: silver;
+    color: lightgreen;
     font-size: 15px;
 }
 
 div.hot-song-list div:last-child{
     border: slateblue solid 1px;
-    background-color: yellowgreen;
+    background-color: lawngreen;
 }
 
-div.hot-search > div:first-child{
-    height: 100%;
-    width: 10%;
-    border: 1px solid red;
-}
 
 div.hot-music {
     display: flex;
@@ -211,39 +220,51 @@ div.hot-music {
     top: 70%;
     height: 40%;
     width: 100%;
-    border: 1px solid red;
+    color:lightsalmon
 }
 
 div.hot-music div.hot-bar {
     height: 20%;
     display: flex;
     align-items: center;
-    border: 1px solid red;
+    color: inherit;
+}
+
+div.hot-music div.hot-bar a{
+    color: inherit;
+    font-size: 40px;
 }
 
 div.hot-music div.hot-bar div {
     margin-left: 5%;
-    font-size: 20px;
 }
 
 div.hot-music div.hot-music-content {
     height: 80%;
     width: 100%;
-    border: 1px solid red;
     display: flex;
 }
 
 div.hot-music div.hot-music-content div.hot-music-list {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     height: 100%;
     width: 15%;
-    border: 1px solid red;
     margin-right: 2%;
+    color: inherit;
     
 }
 
 div.hot-music-list img {
     width: 100%;
     height: 60%;
+    opacity: 70%;
+}
+
+div.hot-music-list div:last-child{
+    border: slateblue solid 1px;
+    background-color: lightsalmon;
+    width: fit-content;
 }

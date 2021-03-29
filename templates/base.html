@@ -3,6 +3,7 @@
 <head>
     {% load static %}
     <title>奇猫音乐</title>
+    <link rel="shortcut icon" href="{% static 'images/panda.ico' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% block link %}
     {% endblock %}
@@ -15,8 +16,8 @@
             {% csrf_token %}
             <div class="search">
                 <input name="kword" type="text" name="search" placeholder="搜索音乐">
-                <input type="submit" name="search-bt" value="搜索">                
-           </div>
+                <input type="submit" name="search-bt" value="搜索">
+            </div>
         </form>
         <div class="nav-bar">
             <div><a href="{% url 'index:index' %}">首页</a></div>
@@ -36,7 +37,7 @@
         </div>
 
         <div class="rotate-image">
-            <a href="javascript:;"><img src="../media/songImg/lizhi.jpg" alt="none"></a>
+            <a href="javascript:;"><img src="../media/songImg/WeightOfSound.png" alt="none"></a>
         </div>
 
         <div class="board">

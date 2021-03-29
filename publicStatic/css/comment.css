@@ -5,15 +5,15 @@ div.comment-content {
     height: 90%;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
     font-size: 20px;
     padding-left: 2em;
+    color: lightgreen;
 }
 
 div.comment-content div.comment-nav{
     font-size: 20px;
     height: 5%;
-    color: lightgreen;
+    color: inherit;
     
 }
 
@@ -23,18 +23,22 @@ div.comment-nav a{
 
  div.comment-form {
     height: 20%;
-    border: 1px solid red;
     row-gap: 10px;
 }
 
 div.comment-content form {
+    display: flex;
+    justify-content: space-between;
     height: 100%;
 }
 
 div.comment-form input[type=textarea] {
     font-size: 20px;
     height: 80%;
-    width: 50%;
+    width: 80%;
+    background-color: inherit;
+    color: whitesmoke;
+    border-style: none;
 }
 div.comment-form input[type=submit] {
     font-size: 20px;
@@ -46,19 +50,22 @@ div.comment-content div.comment-header{
     display: flex;
     align-items: center;
     height: 5%;
+    color: inherit;
 }
 
 div.comment-content div.comment-list{
     display: flex;
     flex-direction: column;
     height: 65%;
+    color: inherit;
 }
 
 div.comment-list div.comment-item {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid silver;
+    border-bottom: 1px solid whitesmoke;
     height: 10%;
+    color: inherit;
 }
 
 div.comment-item > div {
@@ -66,11 +73,13 @@ div.comment-item > div {
     justify-content: center;
     align-items: center;
     width: 15%;
+    color: inherit;
 }
 
 div.comment-item > div.comment-text {
     width: 70%;
     justify-content: flex-start;
+    color: inherit;
 }
 
 div.comment-content div.page-index {
@@ -79,6 +88,7 @@ div.comment-content div.page-index {
     height: 5%;
     justify-content: center;
     align-items: center;
+    
 }
 
 div.page-index > div {

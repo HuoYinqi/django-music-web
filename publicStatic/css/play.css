@@ -1,20 +1,21 @@
 div.play-content {
     position:absolute;
     top: 10%;
-    width: 80%;
+    width: 100%;
     height: 80%;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
+    border-bottom: 2px solid rgb(10, 174, 250);
 }
 
 div.play-content div.music-info {
+    color:royalblue;
     width: 100%;
     height: 40%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid red;
+    border-bottom: 2px solid rgb(10, 174, 250);
 }
 
 div.music-info > div {
@@ -25,15 +26,21 @@ div.music-info div.image {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100%;
-    width: 30%;
-    border: 1px solid red;
+    width: 25%;
 }
 
 div.image img {
     height: 80%;
     width: 50%;
     border-radius: 50%;
+    opacity: 75%;
+}
+
+audio {
+    opacity: 75%;
+    
 }
 
 div.music-info div.basic-info {
@@ -42,34 +49,38 @@ div.music-info div.basic-info {
     justify-content: space-around;
     height: 100%;
     width: 20%;
-    border: 1px solid red;
+    color: inherit;
 }
 
 div.basic-info a {
     padding-left: 1em;
     padding-right: 1em;
     background-color: aquamarine;
-    border: 1px ridge silver;
+    border: 1px ridge skyblue;
 }
 
 div.lyric-and-play-list {
     display: flex;
     width: 100%;
     height: 60%;
-    border: 1px solid red;
 }
 
 div.lyric-and-play-list textarea {
-    color: green;
+    color: red;
     font-size: 20px;
     height: 100%;
     width: 50%;
     text-align: center;
     resize: none;
+    background-image: none;
+    background-color: inherit;
+    border-style: none;
+    border-right: 2px solid rgb(10, 174, 250);
 }
 
 div.lyric-and-play-list div.play-list{
-    background-color:lightcyan;
+    color: whitesmoke;
+    background-color:inherit;
     width: 50%;
     height: 100%;
     display: flex;
@@ -86,7 +97,11 @@ div.play-list > div{
     background-color: inherit;
     display: flex;
     width: 100%;
-    border-bottom: 1px solid skyblue;
+    border-bottom: 1px solid rgb(10, 174, 250);
+}
+
+div.play-list > div a {
+    color: inherit;
 }
 
 div.play-list > div > div {
@@ -95,5 +110,5 @@ div.play-list > div > div {
 }
 
 div.play-list div.current-playing{
-    background-color: whitesmoke;
+    background-color: royalblue;
 }
