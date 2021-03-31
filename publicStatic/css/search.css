@@ -6,14 +6,14 @@ div.search-content{
     height: 80%;
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
+    color: tomato;
 }
 
 div.search-content div.music-header {
     display: flex;
     width: 100%;
     height: 10%;
-    border-bottom: 1px solid silver;
+    color: inherit;
 }
 
 div.search-content div.music-header div {
@@ -29,6 +29,7 @@ div.search-content div.music-list {
     flex-direction: column;
     width: 100%;
     height: 80%;
+    color: whitesmoke;
 }
 
 div.music-list div.music-item {
@@ -47,11 +48,14 @@ div.music-list div.music-item div {
     height: 100%;
 }
 
+div.music-item a{
+    color: whitesmoke;
+}
+
 div.search-content div.page-index {
     display: flex;
     width: 100%;
     height: 10%;
-    border: 1px solid red;
     justify-content: center;
     align-items: center;
 }

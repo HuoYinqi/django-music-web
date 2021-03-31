@@ -17,7 +17,7 @@
     <div class="music-list">
         {% for m in pages.object_list %}
         <div class="music-item">
-            <div><a href="{% url 'play:play' m.id %}">{{ m.name }}</a></div>
+            <div><a href="{% url 'play:play' m.id %}" target="play">{{ m.name }}</a></div>
             <div>{{ m.singer }}</div>
             <div>{{ m.time }}</div>
         </div>

@@ -29,7 +29,7 @@
             <div class="music-item">
                 <div>{{ forloop.counter }}</div>
                 <div><img src="{{ d.song.img.url }}"></div>
-                <div><a href="{% url 'play:play' d.song.id %}">{{ d.song.name }}</a></div>
+                <div><a href="{% url 'play:play' d.song.id %}" target="play">{{ d.song.name }}</a></div>
                 <div><a href="javascript:;">{{ d.song.singer }}</a></div>
                 <div><a href="javascript:;">{{ d.song.label }}</a></div>
             </div>
