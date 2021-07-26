@@ -1,0 +1,106 @@
+div.comment-content {
+    position:absolute;
+    top: 10%;
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding-left: 2em;
+    color: lightgreen;
+}
+
+div.comment-content div.comment-nav{
+    font-size: 20px;
+    height: 5%;
+    color: inherit;
+    
+}
+
+div.comment-nav a{
+    color: inherit;
+}
+
+ div.comment-form {
+    height: 20%;
+    row-gap: 10px;
+}
+
+div.comment-content form {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+div.comment-form input[type=textarea] {
+    font-size: 20px;
+    height: 80%;
+    width: 80%;
+    background-color: inherit;
+    color: whitesmoke;
+    border-style: none;
+}
+div.comment-form input[type=submit] {
+    font-size: 20px;
+    width: 3em;
+    height: 20%;
+}
+
+div.comment-content div.comment-header{
+    display: flex;
+    align-items: center;
+    height: 5%;
+    color: inherit;
+}
+
+div.comment-content div.comment-list{
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+    color: inherit;
+}
+
+div.comment-list div.comment-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid whitesmoke;
+    height: 10%;
+    color: inherit;
+}
+
+div.comment-item > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    color: inherit;
+}
+
+div.comment-item > div.comment-text {
+    width: 70%;
+    justify-content: flex-start;
+    color: inherit;
+}
+
+div.comment-content div.page-index {
+    display: flex;
+    width: 100%;
+    height: 5%;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+div.page-index > div {
+    color: skyblue;
+    margin-left: 30px;
+}
+
+div.page-index > div{
+    margin-left: 30px;
+}
+
+div.page-index > div a {
+    color:lightcoral;
+}
+

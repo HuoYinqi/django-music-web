@@ -1,0 +1,96 @@
+div.rank-content{
+    position:absolute;
+    top: 10%;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    border-bottom: 2px solid rgb(10, 174, 250);
+    justify-content: space-between;
+
+}
+
+div.rank-content div.rank-categories {
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 100%;
+    font-size: 20px;
+    overflow: auto;
+}
+
+div.rank-categories div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5%;
+    color:lightgreen;
+    background-color:inherit ;
+}
+
+div.rank-categories div a{
+    color: aquamarine;
+}
+
+div.rank-categories div:hover{
+    background-color:grey ;
+}
+
+
+div.music-board {
+    color: tomato;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    border-left:1px solid lightblue;
+}
+
+div.music-board div.music-board-title {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 2em;
+    color: slateblue;
+}
+
+div.music-board div.music-list-header {
+    color: lightblue;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+}
+
+div.music-list-header > div {
+    text-align: center;
+    font-size: inherit;
+    width: 20%;
+}
+
+div.music-board div.music-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+div.music-list div.music-item {
+    display: flex;
+    height: 8%;
+
+}
+
+div.music-item a{
+    color: inherit;
+}
+
+div.music-item > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+}
+
+div.music-item img {
+    height: 90%;
+    width: 40%;
+}
