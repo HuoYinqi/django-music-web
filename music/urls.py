@@ -26,6 +26,7 @@ urlpatterns = [
     path("ranking/", include("ranking.urls", namespace="ranking")),
     path("search/", include("search.urls", namespace="search")),
     path("comment/", include("comment.urls", namespace="comment")),
+    path("user/", include("user.urls", namespace="user")),
     # 配置媒体资源的路由信息
     re_path(
         "media/(?P<path>.*)",

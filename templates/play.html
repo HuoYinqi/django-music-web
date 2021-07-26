@@ -5,24 +5,6 @@
 {% block link %}
 <link rel="stylesheet" href="{% static 'css/play.css' %}">
 {% endblock %}
-{% block top %}
-    <div class="top">
-        <h1><a href="{% url 'index:index' %}" target="_blank">奇猫音乐</a></h1>
-        <form id="search_form" action="{% url 'search:search' 1 %}" method="POST">
-            {% csrf_token %}
-            <div class="search">
-                <input name="kword" type="text" name="search" placeholder="搜索音乐">
-                <input type="submit" name="search-bt" value="搜索">
-            </div>
-        </form>
-        <div class="nav-bar">
-            <div><a href="{% url 'index:index' %}" target="_blank">首页</a></div>
-            <div><a href="{% url 'ranking:ranking' %}" target="_blank">歌曲排行</a></div>
-            <div><a href="javascript:;" target="_blank">用户中心</a></div>
-        </div>
-    </div>
-{% endblock %}
-
 
 {% block content %}
 <div class="play-content">
@@ -69,6 +51,10 @@
     </div>
 </div>
 <script>
+    $(document).ready(function(){
+        $("div.top a").attr({target:"_blank"})
+    })
+    
     var play_list = {{ play_list|safe }}
     console.log(play_list)
     next.onclick = function () {

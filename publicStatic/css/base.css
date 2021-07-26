@@ -23,6 +23,7 @@ div.top {
 }
 
 div.top h1{
+    width: 20%;
     margin-left: 5%;
 }
 
@@ -39,7 +40,6 @@ div.top div.search{
 div.top form {
     width: 30%;
     height: 50%;
-    margin-left: 10%;
     display: flex;
 }
 
@@ -69,8 +69,7 @@ div.top div.search input[type=submit]:active {
 div.nav-bar {
     font-size: 25px;
     height: 100%;
-    width: 30%;
-    margin-left: 10%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-around;

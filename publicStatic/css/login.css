@@ -1,0 +1,57 @@
+div.login-content{
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    width: 30%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    color:red;
+    border: 1px solid white;
+    align-items: center;
+}
+
+div.login-content > div:first-child {
+    font-size: 30px;
+}
+
+div.login-content div {
+    color: inherit
+}
+
+div.login-content a {
+    color: green;
+}
+
+div.login-content form.user {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 80%;
+    align-items: center;
+}
+
+form.user > div {
+    display: flex;
+    height: 20%;
+    width: 100%;
+    align-items: center;
+}
+
+form.user > div div {
+    width: 40%;
+}
+form.user > div.tip{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+form.user > div input {
+    width: 60%;
+    height: 50%;
+}
+
+div.login-content form input[type=submit] {
+    width: 100%;
+    height: 15%;
+}

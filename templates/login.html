@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="login-content">
+    <div>{{ page_title }}</div>
+    <form class="user" action="" method="POST">
+        {% csrf_token %}
+        <div class="username">
+            <div>用户名：</div>
+            <input type="text" name="username" value="{{ u }}" placeholder="请输入用户名">
+        </div>
+        <div class="password">
+            <div>密 码：</div>
+            <input type="password" name="password" value="{{ p }}" placeholder="请输入密码">
+        </div>
+        {% if is_confirm_password %}
+        <div class="password2">
+            <div>确认密码：</div>
+            <input type="password" name="password1" placeholder="确认密码">
+        </div>
+        {% endif %}
+        <div class="tip">{{ tips }}</div>
+        <input type="submit" value="{{ button }}">
+    </form>
+    <div><a href="{% url url_name %}">{{ url_text }}</a></div>
+
+</div>
+{% endblock %}
+
+
+{% block bottom %}
+{% endblock %}

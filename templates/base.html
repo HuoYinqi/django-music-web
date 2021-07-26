@@ -5,6 +5,7 @@
     <title>奇猫音乐</title>
     <link rel="shortcut icon" href="{% static 'images/panda.ico' %}">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/jquery-3.6.0.js' %}"></script>
     {% block link %}
     {% endblock %}
 </head>
@@ -23,7 +24,13 @@
         <div class="nav-bar">
             <div><a href="{% url 'index:index' %}">首页</a></div>
             <div><a href="{% url 'ranking:ranking' %}">歌曲排行</a></div>
-            <div><a href="javascript:;">用户中心</a></div>
+            <div><a href="{% url 'user:user_detail' %}">用户中心</a></div>
+            {% if user.username %}
+            <div>{{ user.username }}</div>
+            <div><a href="{% url 'user:logout' %}">注销</a></div>
+            {% else %}
+            <div><a href="{% url 'user:login' %}">登录</a></div>
+            {% endif %}
         </div>
     </div>
     {% endblock %}
